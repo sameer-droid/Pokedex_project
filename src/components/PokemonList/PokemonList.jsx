@@ -33,10 +33,16 @@ async function downloadPokemons(){
     return (
         <div className="pokemon-list-wrapper">
             <div>  List of pokemons</div>
-          
+          <div className="pokemon-wrapper">
             {(isloading)?"Loading" : 
             pokemonlist.map((pokemon)=> <Pokemon name={pokemon.name} image ={pokemon.image} key={pokemon.id}/>)
             }
+            </div>
+            <div className="controls">
+                <button>prev</button>
+                <button>next</button>
+            </div>
+            
         </div>
     )
 }
